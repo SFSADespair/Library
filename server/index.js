@@ -23,4 +23,6 @@ app.get('/', (req, res) => {
 const PORT = process.env.PORT || 5000
 
 //DB connecttion
-connectDB()
+connectDB().then(() => {
+    app.listen(PORT, () => console.log(`Server started on: ${PORT}`))
+}).catch((err) => console.log(err))
