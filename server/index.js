@@ -23,8 +23,4 @@ app.get('/', (req, res) => {
 const PORT = process.env.PORT || 5000
 
 //DB connecttion
-try {
-    connectDB()
-} catch (e) {
-    console.log(e)
-}
+connectDB()
